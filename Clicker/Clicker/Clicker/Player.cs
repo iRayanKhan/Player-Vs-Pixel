@@ -71,7 +71,7 @@ namespace Clicker {
         private bool wasJumping;
         private float jumpTime;
 
-        private Rectangle localBounds;
+        public Rectangle localBounds;
 
         public Rectangle BoundingRectangle {
             get {
@@ -110,6 +110,10 @@ namespace Clicker {
             isAlive = true;
         }
 
+        public void setDead() {
+            isAlive = false;
+        }
+
         public void GetInput() {
             GamePadState gamePadState = GamePad.GetState(PlayerIndex.One);
             KeyboardState keyboardState = Keyboard.GetState();
@@ -130,13 +134,15 @@ namespace Clicker {
         }
 
         public void Update(GameTime _gameTime) {
-            GetInput();
+            if (isAlive) {
+                GetInput();
 
-            ApplyPhysics(_gameTime);
+                ApplyPhysics(_gameTime);
 
-            movement = 0.0f;
-            isJumping = false;
-            isClinging = false;
+                movement = 0.0f;
+                isJumping = false;
+                isClinging = false;
+            }
         }
 
         public void ApplyPhysics(GameTime _gameTime) {

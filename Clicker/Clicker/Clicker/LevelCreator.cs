@@ -15,6 +15,7 @@ namespace Clicker
         private Dictionary<string, Texture2D> platformTextures;
         private Player player;
         private Game1 toPass;
+        private enemy ene;
 
         public ContentManager Content
         {
@@ -93,10 +94,17 @@ namespace Clicker
                     return LoadPlatform("Texture", new Rectangle(0 + (x * 50), 0 + (y * 100), 50, 100), Platform.PlatformType.verticallyCollidable);
                 case 's':
                     return LoadSpawn(x,y);
+                case 'e':
+                    return LoadEnemy(x, y);
                 default:
                     throw new NotSupportedException(String.Format(
                         "Unsupported type character detected, {0}, please remove said illegal character at {1}, {2}.", platform, x, y));
             }
+        }
+
+        private Platform LoadEnemy(int x, int y) {
+            ene = new enemy(new Vector2(x, y));
+            return new Platform(String.Empty, new Rectangle(x, y, PlatWidth, PlatHeight), Platform.PlatformType.incollidable);
         }
 
         private Platform LoadSpawn(int _x, int _y) {
@@ -116,6 +124,7 @@ namespace Clicker
         {
             DrawPlatforms(spriteBatch);
             player.Draw(gameTime, spriteBatch);
+            ene.Draw(spriteBatch, Content.Load<Texture2D>("click"));
         }
 
         public Platform.PlatformType GetCollision(int x, int y) {
@@ -124,6 +133,8 @@ namespace Clicker
 
         public void Update(GameTime gameTime, SpriteBatch spriteBatch) {
             player.Update(gameTime);
+            ene.Update(gameTime, player);
+
         }
 
         private void DrawPlatforms(SpriteBatch spriteBatch)
