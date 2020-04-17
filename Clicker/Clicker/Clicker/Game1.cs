@@ -19,10 +19,28 @@ namespace Clicker
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        enum GameState
+        {
+            MainMenu,
+            Options,
+            Playing,
+
+        }
+        GameState CurrentGameState = GameState.MainMenu;
+
+
+        public LevelCreator levelCreator;
+
+        cButton btnPlay;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferWidth = 1600;
+            graphics.PreferredBackBufferHeight = 800;
+            IsMouseVisible = true;
+            graphics.ApplyChanges();
         }
 
         /// <summary>
@@ -34,7 +52,7 @@ namespace Clicker
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            levelCreator = new LevelCreator(Services, @"Content/Platform Setter/Sample.txt", this);
             base.Initialize();
         }
 
@@ -46,6 +64,9 @@ namespace Clicker
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            btnPlay = new cButton(Content.Load<Texture2D>("Button"), graphics.GraphicsDevice);
+            btnPlay.setPosition(new Vector2(350, 300));
 
             // TODO: use this.Content to load your game content here
         }
@@ -65,11 +86,22 @@ namespace Clicker
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
-        {
+         {
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+            levelCreator.Update(gameTime, spriteBatch);
+            MouseState mouse = Mouse.GetState();
+            switch (CurrentGameState)
+            {
+                case GameState.MainMenu:
+                    if (btnPlay.isClicked == true) CurrentGameState = GameState.Playing;
+                    btnPlay.Update(mouse);
+                    break; 
 
+                case GameState.Playing:
+                    break;
+            }
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -83,7 +115,21 @@ namespace Clicker
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
+
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            switch (CurrentGameState)
+            {
+                case GameState.MainMenu:
+                    btnPlay.Draw(spriteBatch);
+                    break;
+
+                case GameState.Playing:
+                    levelCreator.Draw(gameTime, spriteBatch);
+                    break;
+            }
+            
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
