@@ -17,23 +17,3 @@ C:\Users\AM\Desktop\Player-Vs-Pixel-Caleb\Player-Vs-Pixel-Caleb\Clicker\Clicker\
 C:\Users\AM\Desktop\Player-Vs-Pixel-Caleb\Player-Vs-Pixel-Caleb\Clicker\Clicker\Clicker\bin\x86\Debug\Content\Platform Setter\Sample.xnb
 C:\Users\AM\Desktop\Player-Vs-Pixel-Caleb\Player-Vs-Pixel-Caleb\Clicker\Clicker\Clicker\bin\x86\Debug\Content\Platform Setter\Sample.txt
 C:\Users\AM\Desktop\Player-Vs-Pixel-Caleb\Player-Vs-Pixel-Caleb\Clicker\Clicker\Clicker\bin\x86\Debug\Content\Player\player.xnb
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Content\Platform Setter\Sample.xnb
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Content\Player\player.xnb
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Content\Platform Setter\Sample.txt
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Clicker.exe
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Clicker.pdb
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Microsoft.Xna.Framework.dll
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Microsoft.Xna.Framework.xml
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\obj\x86\Debug\Clicker.csprojResolveAssemblyReference.cache
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\obj\x86\Debug\Clicker.exe
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\obj\x86\Debug\Clicker.pdb
-C:\Users\ASRA\Desktop\Clicker\Clicker\Clicker\bin\x86\Debug\Content\Button.xnb

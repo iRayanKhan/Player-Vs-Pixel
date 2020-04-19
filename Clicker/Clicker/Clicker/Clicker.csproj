@@ -57,7 +57,7 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cButton.cs" />
+    <Compile Include="enemy.cs" />
     <Compile Include="LevelCreator.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="Player.cs" />

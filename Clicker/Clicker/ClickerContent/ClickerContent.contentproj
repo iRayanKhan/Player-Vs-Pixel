@@ -41,8 +41,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Button.png">
-      <Name>Button</Name>
+    <Compile Include="click.png">
+      <Name>click</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
